@@ -17,6 +17,7 @@ module.exports.isValidPhone = function isValidPhone(phone) {
 module.exports.isValidEmail = function isValidEmail(email) {
     return /^[0-9A-zА-я\-_]{1,}@[0-9A-zА-я\-_]{1,}(\.[0-9A-zА-я\-_]{1,}){1,}/.test(email);
 };
+
 /*
  Функция добавления записи в телефонную книгу.
  На вход может прийти что угодно, будьте осторожны.
@@ -65,8 +66,6 @@ module.exports.remove = function remove(query) {
 /*
  Функция импорта записей из файла (задача со звёздочкой!).
  */
-
-
 module.exports.importFromCsv = function importFromCsv(filename) {
     var data = require('fs')
         .readFileSync(filename, 'utf-8');
